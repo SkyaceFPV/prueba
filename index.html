@@ -8,15 +8,14 @@
   <!-- Fonts y Tailwind -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
     body {
-      background-color: #000;
       font-family: 'Lato', sans-serif;
       color: #fff;
+      background: url('foindo cielo.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
     h1, h2, h3, h4 {
       font-family: 'Playfair Display', serif;
@@ -31,17 +30,12 @@
     .hover-gold:hover {
       background-color: #e6c200;
     }
-    .parallax {
-      background-image: url('https://images.unsplash.com/photo-1511453675184-1886b48d748e');
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+    .bg-overlay {
+      background-color: rgba(0, 0, 0, 0.75);
     }
   </style>
 </head>
-
-<body>
+<body class="bg-overlay">
 
 <header class="p-6 bg-black bg-opacity-90 flex justify-between items-center sticky top-0 z-50 shadow-lg">
   <h1 class="text-3xl">SKYACE FPV</h1>
@@ -53,49 +47,38 @@
   </nav>
 </header>
 
-<!-- HERO Video -->
-<section class="relative h-screen overflow-hidden">
-  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
-    <source src="https://cdn.coverr.co/videos/coverr-flying-over-a-forest-0874/1080p.mp4" type="video/mp4">
-    Tu navegador no soporta video HTML5.
-  </video>
-  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-70 z-10 flex items-center justify-center">
-    <div class="text-center px-4" data-aos="fade-up">
-      <h2 class="text-5xl mb-4">Filmación aérea profesional</h2>
-      <p class="text-xl mb-6">FPV Cinewhoop + DJI estabilizados. Precisión técnica con creatividad visual.</p>
-      <a href="#contacto" class="bg-gold text-black px-6 py-3 rounded font-semibold hover-gold">Contáctanos</a>
-    </div>
+<section class="h-screen flex items-center justify-center text-center px-4">
+  <div data-aos="fade-up">
+    <h2 class="text-5xl mb-4">Filmación aérea profesional</h2>
+    <p class="text-xl mb-6">FPV Cinewhoop + DJI estabilizados. Precisión técnica con creatividad visual.</p>
+    <a href="#contacto" class="bg-gold text-black px-6 py-3 rounded font-semibold hover-gold">Contáctanos</a>
   </div>
 </section>
 
-<!-- QUIÉNES SOMOS con Parallax -->
-<section id="quienes" class="parallax py-32 text-center px-6">
-  <div class="bg-black bg-opacity-70 p-8 rounded max-w-4xl mx-auto" data-aos="fade-right">
-    <h3 class="text-4xl mb-6">¿Quiénes Somos?</h3>
-    <p class="text-lg text-gray-300">En Skyace FPV, combinamos precisión técnica con creatividad visual. Usamos tecnología de drones FPV cinewhoop y DJI profesionales para crear tomas aéreas únicas, dinámicas y de alta calidad para todo tipo de proyectos.</p>
-  </div>
+<section id="quienes" class="py-20 text-center px-6 max-w-4xl mx-auto bg-black bg-opacity-70 rounded" data-aos="fade-up">
+  <h3 class="text-4xl mb-6">¿Quiénes Somos?</h3>
+  <p class="text-lg text-gray-300">En Skyace FPV, combinamos precisión técnica con creatividad visual. Usamos tecnología de drones FPV cinewhoop y DJI profesionales para crear tomas aéreas únicas, dinámicas y de alta calidad para todo tipo de proyectos.</p>
 </section>
 
-<!-- SERVICIOS -->
-<section id="servicios" class="py-20 bg-gray-950 text-center px-6">
-  <h3 class="text-4xl mb-10" data-aos="fade-up">Servicios</h3>
+<section id="servicios" class="py-20 text-center px-6 bg-black bg-opacity-80 mt-10 rounded" data-aos="fade-up">
+  <h3 class="text-4xl mb-10">Servicios</h3>
   <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-    <div class="bg-gray-900 p-6 rounded border border-yellow-600" data-aos="zoom-in">
+    <div class="bg-gray-900 p-6 rounded border border-yellow-600" data-aos="fade-up">
       <h4 class="text-2xl mb-2">🎬 Producción audiovisual aérea</h4>
       <p>Videoclips, publicidad, eventos, reels y vídeos corporativos</p>
       <p class="highlight mt-2">Desde 300 €</p>
     </div>
-    <div class="bg-gray-900 p-6 rounded border border-yellow-600" data-aos="zoom-in" data-aos-delay="100">
+    <div class="bg-gray-900 p-6 rounded border border-yellow-600" data-aos="fade-up" data-aos-delay="100">
       <h4 class="text-2xl mb-2">🏠 Inmobiliaria y turismo</h4>
       <p>Vídeo y fotografía aérea para propiedades y alojamientos turísticos</p>
       <p class="highlight mt-2">Desde 150 €</p>
     </div>
-    <div class="bg-gray-900 p-6 rounded border border-yellow-600" data-aos="zoom-in" data-aos-delay="200">
+    <div class="bg-gray-900 p-6 rounded border border-yellow-600" data-aos="fade-up" data-aos-delay="200">
       <h4 class="text-2xl mb-2">🛠 Inspecciones técnicas</h4>
       <p>Control visual de estructuras, obras, tejados y más</p>
       <p class="highlight mt-2">Desde 150 €</p>
     </div>
-    <div class="bg-gray-900 p-6 rounded border border-yellow-600" data-aos="zoom-in" data-aos-delay="300">
+    <div class="bg-gray-900 p-6 rounded border border-yellow-600" data-aos="fade-up" data-aos-delay="300">
       <h4 class="text-2xl mb-2">🧑‍🏫 Formación personalizada FPV</h4>
       <p>Iniciación o perfeccionamiento en vuelo FPV</p>
       <p class="highlight mt-2">Desde 100 €</p>
@@ -103,10 +86,9 @@
   </div>
 </section>
 
-<!-- VENTAJAS -->
-<section id="ventajas" class="py-20 text-center px-6 max-w-4xl mx-auto">
-  <h3 class="text-4xl mb-8" data-aos="fade-up">¿Por qué elegirnos?</h3>
-  <ul class="text-left text-gray-300 space-y-3 text-lg" data-aos="fade-up" data-aos-delay="200">
+<section id="ventajas" class="py-20 text-center px-6 max-w-4xl mx-auto bg-black bg-opacity-70 mt-10 rounded" data-aos="fade-up">
+  <h3 class="text-4xl mb-8">¿Por qué elegirnos?</h3>
+  <ul class="text-left text-gray-300 space-y-3 text-lg">
     <li>✅ Tecnología FPV + DJI profesional</li>
     <li>✅ Calidad cinematográfica y creativa</li>
     <li>✅ Adaptación a cada cliente</li>
@@ -115,11 +97,10 @@
   </ul>
 </section>
 
-<!-- CONTACTO -->
-<section id="contacto" class="py-20 bg-gray-950 text-center px-6">
-  <h3 class="text-4xl mb-6" data-aos="fade-up">Contáctanos</h3>
-  <p class="mb-4 text-lg text-gray-300" data-aos="fade-up">Presupuestos a medida y sin compromiso.<br>Te asesoramos y te ayudamos a destacar desde el aire.</p>
-  <div class="space-y-2 text-lg" data-aos="fade-up" data-aos-delay="200">
+<section id="contacto" class="py-20 text-center px-6 bg-black bg-opacity-80 mt-10 rounded" data-aos="fade-up">
+  <h3 class="text-4xl mb-6">Contáctanos</h3>
+  <p class="mb-4 text-lg text-gray-300">Presupuestos a medida y sin compromiso.<br>Te asesoramos y te ayudamos a destacar desde el aire.</p>
+  <div class="space-y-2 text-lg">
     <p>📱 WhatsApp / Tel: <a href="tel:+34667329808" class="highlight">667 329 808</a></p>
     <p>📧 Email: <a href="mailto:contacto@skyacefpv.com" class="highlight">contacto@skyacefpv.com</a></p>
     <p>📸 Instagram / TikTok: <span class="highlight">@skyacefpv</span></p>
@@ -128,17 +109,13 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-black text-center p-5 text-sm text-gray-500">
+<footer class="bg-black bg-opacity-90 text-center p-5 text-sm text-gray-400 mt-10">
   © 2025 <span class="highlight">SKYACE FPV</span> — Todos los derechos reservados.
 </footer>
 
-<!-- JS de AOS -->
+<!-- AOS Animation Script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
-
-</body>
-</html>
 
 </body>
 </html>
